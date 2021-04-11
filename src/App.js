@@ -20,6 +20,15 @@ function App() {
         />
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
         <pointLight position={[0, -10, 0]} intensity={1.5} />
+
+        <group>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
+            <planeBufferGeometry attach="geometry" args={[100, 100]} />
+            {/* This will be the shadows */}
+            <meshStandardMaterial attach="material" color={"yellow"} />
+          </mesh>
+        </group>
+
         <SpinningMesh position={[0, 1, 0]} args={[3, 2, 1]} color="lightblue" />
         <SpinningMesh position={[-2, 1, -5]} color="pink" />
         <SpinningMesh position={[5, 1, -2]} color="pink" />
